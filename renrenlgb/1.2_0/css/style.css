@@ -1,0 +1,40 @@
+a{
+cursor:pointer;
+}
+.hide{
+display:none;
+}
+.fs_title{
+height:25px;
+}
+.fs_title a{
+cursor:pointer;
+color: #999;
+font-weight:bold;
+}
+.fs_title a:hover{
+color:#CCC;
+text-decoration:none;
+}
+#fs_id{
+margin-bottom:5px;
+}
+.fs_item label{
+font-weight:normal;
+margin:3px 0;
+display:inline-block;
+width:90px;
+}
+.fs_item input{
+margin-right:2px;
+}
+.fs_option{
+margin:5px 0;
+}
+.fs_btn{
+margin:5px auto;
+}
+.loading{
+display:inline-block;
+color:#005EAC;
+}

@@ -1,0 +1,24 @@
+{
+   "browser_action": {
+      "default_icon": "img/icon.png"
+   },
+   "content_scripts": [ {
+      "css": [ "css/style.css" ],
+      "js": [ "js/jquery-1.8.0.min.js", "js/script.js" ],
+      "matches": [ "http://*.renren.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "\u79C0\u6069\u7231\uFF0C\u5206\u5F97\u5FEB",
+   "icons": {
+      "128": "img/icon.png",
+      "16": "img/icon.png",
+      "32": "img/icon.png",
+      "48": "img/icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQKY4lqgX7vkYbqN+cSI+TzX9bKvZM9G36kTHyS6aq1f/OR8R36L5LTNjwF2vtEr/VAFuoXEzilVlCuixOKtc2HRtytegKZMSXmds/2s2hZUwb3qjb0OhFNCBqfSSkjEMjt0P5jsxB03xXr7Bmm+6TPBHqE41xL/DjNvzc7oZ/uQIDAQAB",
+   "manifest_version": 2,
+   "name": "\u4EBA\u4EBA\u7F51\u5206\u624B\u5668",
+   "permissions": [ "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}
