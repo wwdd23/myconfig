@@ -9,7 +9,8 @@ loginAddr = 'http://www.renren.com/PLogin.do'
 getMsgAddr = 'http://gossip.renren.com/getconversation.do'
 delMsgAddr = 'http://gossip.renren.com/delgossip.do'
 #`headers = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5'}
-headers = {'User-Agent':' Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0'}
+#headers = {'User-Agent':' Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0'}
+headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1'}
 class MsgStruct(object):
     def __init__(self, id_p, owner_id):
         self.id = id_p
@@ -26,7 +27,6 @@ class RenrenProcessor(object):
         params = params.encode('utf-8')
         req = urllib2.Request(url = loginAddr, data = params, headers = headers)
         response = urllib2.urlopen(req) 
-        print response
         f = open("renren.html", "wb")
         f.write(response.read())
     def getId(self, text, startIndex):
