@@ -4,7 +4,7 @@ import urllib2, cookielib, urllib, time
 userName = 'wwdd.23@163.com'#你的账户
 passWord = '075100'#你的密码
 myUserId = '256593238'#你的ID
-destUserId = '282670876'#想删除的美眉的ID
+destUserId = '278877089'#想删除的美眉的ID
 loginAddr = 'http://www.renren.com/PLogin.do'
 getMsgAddr = 'http://gossip.renren.com/getconversation.do'
 delMsgAddr = 'http://gossip.renren.com/delgossip.do'
@@ -51,8 +51,8 @@ class RenrenProcessor(object):
         params = params.encode('utf-8')
         req = urllib2.Request(url = getMsgAddr, data = params, headers = headers)
         response = urllib2.urlopen(req)
-        #f = open("msg.html", "wb")
-        #write(response.read())
+        f = open("msg.html", "wb")
+        f.write(response.read())
         return self.dealMsgText(response.read())
 
     def delMsg(self, curMsgIndex):
