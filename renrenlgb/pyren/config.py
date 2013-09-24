@@ -5,7 +5,8 @@ ICODEURL = r'http://icode.renren.com/getcode.do?t=login&rnd=Math.random()'
 
 #EMAIL = r'您的邮箱'
 #PASSWORD = r'您的密码'
-EMAIL = r'wwdd.23@163.com'
+#EMAIL = r'wwdd.23@163.com'
+EMAIL = r'13613112728'
 PASSWORD = r'075100'
 
 WALLURL = r'http://w.renren.com/wall/'

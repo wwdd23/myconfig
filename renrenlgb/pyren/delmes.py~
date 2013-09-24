@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 import urllib2, cookielib, urllib, time
 
-userName = 'wwdd.23@163.com'#你的账户
+userName = '13613112728'#你的账户
 passWord = '075100'#你的密码
 myUserId = '256593238'#你的ID
-destUserId = '282670876'#想删除的美眉的ID
+destUserId = '278877089'#想删除的美眉的ID
 loginAddr = 'http://www.renren.com/PLogin.do'
 getMsgAddr = 'http://gossip.renren.com/getconversation.do'
 delMsgAddr = 'http://gossip.renren.com/delgossip.do'
-#`headers = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5'}
-#headers = {'User-Agent':' Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0'}
-headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1'}
+#headers = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5'}
+headers = {'User-Agent':' Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0'}
+#headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1'}
+#headers = {'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'}
 class MsgStruct(object):
     def __init__(self, id_p, owner_id):
         self.id = id_p
@@ -50,9 +51,12 @@ class RenrenProcessor(object):
         params = urllib.urlencode(params)
         params = params.encode('utf-8')
         req = urllib2.Request(url = getMsgAddr, data = params, headers = headers)
+
+        tmp = open("req.html","wb")
+
         response = urllib2.urlopen(req)
-        #f = open("msg.html", "wb")
-        #write(response.read())
+        f = open("msg.html", "wb")
+        f.write(response.read())
         return self.dealMsgText(response.read())
 
     def delMsg(self, curMsgIndex):
